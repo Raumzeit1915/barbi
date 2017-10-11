@@ -4,7 +4,7 @@ Nodes for Simatic IOT2000 io shield.
 
 ![ioshield](ioshield.png)
 
-© Siemens AG
+Â© Siemens AG
 
 ## Installation
 
@@ -38,4 +38,4 @@ Copyright 2017 D. Yolcubal. under [the Apache 2.0 license](LICENSE).
 
 **SIMATIC** and **SIMATIC IOT2000** are trademark of Siemens AG.
 
-More Nodes soon on https://github.com/sblyolcubal
+More Nodes and Libraries soon on https://github.com/sblyolcubal
