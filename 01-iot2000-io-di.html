@@ -1,0 +1,63 @@
+<!--
+  Copyright 2017 D. Yolcubal (deryayolcubal@gmail.com).
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/javascript">
+    RED.nodes.registerType('iot2000-io-di',{
+        category: 'simatic iot2000',
+        color: '#3FADB5',
+        paletteLabel: 'io shield di',
+        defaults: {
+            pin: { value: "", required: true },
+            name: { value: "" },
+         },
+        inputs:1,
+        outputs:1,
+        icon: "arrow-in.png",
+        label: function () {
+            return this.name || this.pin || "io shield di";
+        },
+        labelStyle: function () {
+            return this.name ? "node_label_italic" : "";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="iot2000-io-di">
+    <div class="form-row">
+        <label for="node-input-pin"><i class="fa fa-arrow-circle-right"></i> Digital Input</label>
+        <select type="text" id="node-input-pin" style="width: auto;">
+            <option value="DI0">DI0</option>
+            <option value="DI1">DI1</option>
+            <option value="DI2">DI2</option>
+            <option value="DI3">DI3</option>
+            <option value="DI4">DI4</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name" style="width: 300px;">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="iot2000-io-di">
+    <p>Reads from IOT2000's io shield digital input.</p>
+    <h3><b>Input</b></h3>
+    <p>Any input message triggers read operation.</p>
+    <h3><b>Output</b></h3>
+    <p>The digital input state are send to <code>msg.payload</code> as "0" or "1" on change.</p>
+    <h3><b>Properties</b></h3>
+    <p><i class="fa fa-arrow-circle-right"></i><b> Digital input:</b> Selects digital input.</p>
+</script>

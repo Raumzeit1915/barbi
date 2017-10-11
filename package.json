@@ -1,0 +1,31 @@
+{
+  "name": "node-red-contrib-iot2000",
+  "version": "2.0.0",
+  "description": "Nodes for Simatic IOT2000 I/O shield",
+
+  "dependencies": {
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dyolcubal/node-red-contrib-iot2000"
+  },
+
+  "license": "Apache-2.0",
+  "keywords": [ "node-red", "iot2000", "iot", "simatic", "digital input", "digital output", "analog input"],
+
+  "node-red": {
+    "nodes": {
+      "iot2000-io-di": "01-iot2000-io-di.js",
+      "iot2000-io-do": "02-iot2000-io-do.js",
+      "iot2000-io-ai": "03-iot2000-io-ai.js",
+      "iot2000-io-pulse": "90-iot2000-io-pulse.js"
+    }
+  },
+
+  "author": {
+    "name": "Derya Yolcubal",
+    "email": "deryayolcubal@gmail.com",
+    "url": "https://github.com/dyolcubal/node-red-contrib-iot2000"
+  }
+}
